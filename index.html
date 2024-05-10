@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Input bot</title>
+    <style>
+        body{
+            align-content: center;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            background-color: rgb(4, 4, 24);
+            margin-top: 100p;
+           
+        }
+        input{
+            background-color: rgb(4, 4, 24);
+            width: 100%;
+            border: 1px solid rgb(10, 10, 58);
+            color: blue;
+        }
+        textarea{
+            background-color: rgb(4, 4, 24);
+            border: 1px solid rgb(10, 10, 58);
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="" onsubmit=" return sendtelegram()">
+            <input type="text" name="name" id="name" placeholder="Ismingiz" required autocomplete="off">
+            <input type="email" name="email" id="email" placeholder="Email manzilingiz" required autocomplete="on"> <br> <br>
+            <!-- <input type="text" name="name" id="for" placeholder="Yozuvni 100ga ko'paytirish"> -->
+            <!-- <a href="https://t.me/+fc3ElXOcdpY2YzMy">kanal</a> -->
+            <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea> <br> <br>
+            <input type="submit" value="Yuborish" id="btn">
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
