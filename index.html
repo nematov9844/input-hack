@@ -1,48 +1,40 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Input bot</title>
-    <style>
-        body{
-            align-content: center;
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            background-color: rgb(4, 4, 24);
-            margin-top: 100p;
-           
-        }
-        input{
-            background-color: rgb(4, 4, 24);
-            width: 100%;
-            border: 1px solid rgb(10, 10, 58);
-            color: blue;
-        }
-        textarea{
-            background-color: rgb(4, 4, 24);
-            border: 1px solid rgb(10, 10, 58);
-            color: blue;
-        }
-    </style>
 </head>
-
-<body>
-    <div class="form">
-        <form action="" onsubmit=" return sendtelegram()">
-            <input type="text" name="name" id="name" placeholder="Ismingiz" required autocomplete="off">
-            <input type="email" name="email" id="email" placeholder="Email manzilingiz" required autocomplete="on"> <br> <br>
-<!--             <input type="text" name="name" id="for" placeholder="Yozuvni 100ga ko'paytirish">
-            <a href="https://t.me/+fc3ElXOcdpY2YzMy">kanal</a> -->
-            <textarea name="message" id="message" cols="45" rows="10" placeholder="Izoh qoldiring" required></textarea> <br> <br>
-            <input type="submit" value="Yuborish" id="btn">
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md">
+        <form onsubmit="return sendtelegram()" class="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-500 leading-tight focus:outline-none focus:shadow-outline bg-gray-700" type="text" name="name" id="name" placeholder="Ismingiz"  autocomplete="off">
+            </div>
+            <div class="mb-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-500 leading-tight focus:outline-none focus:shadow-outline bg-gray-700" type="email" name="email" id="email" placeholder="Email manzilingiz" autocomplete="on">
+            </div>
+            <!-- <div class="mb-4">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-500 leading-tight focus:outline-none focus:shadow-outline bg-gray-700" type="text" name="name" id="for" placeholder="Yozuvni 100ga ko'paytirish">
+            </div> -->
+            <div class="mb-4">
+                <a href="https://t.me/+fc3ElXOcdpY2YzMy" class="text-blue-500 hover:text-blue-700">Jo'natiladigan Guruh</a>
+            </div>
+            <div class="mb-6">
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-blue-500 leading-tight focus:outline-none focus:shadow-outline bg-gray-700" name="message" id="message" rows="5" placeholder="Izoh qoldiring" required></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Yuborish" id="btn">
+            </div>
         </form>
     </div>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
-
 </html>
